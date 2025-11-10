@@ -32,6 +32,13 @@
         h1 {
             color: #333;
         }
+        #proof {
+            display: none;
+            margin-top: 15px;
+            background-color: #e9f7e9;
+            padding: 15px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -52,8 +59,11 @@
 
     <section id="math">
         <h1>Math</h1>
-        <p>Here is the proof for my latest mathematical work:</p>
-        <!-- Insert proof content here -->
+        <p>Here is the proof for my Euclidean Algorithm:</p>
+        <button onclick="toggleProof()">Show Proof</button>
+        <div id="proof">
+            <p><a href="https://vstige.github.io/EuclideanAlgorithm.pdf" target="_blank">Click here to view the Euclidean Algorithm Proof</a></p>
+        </div>
     </section>
 
     <section id="physics">
@@ -75,6 +85,17 @@
         <h1>Biology</h1>
         <p>Here I post Biology notes.</p>
     </section>
+
+    <script>
+        function toggleProof() {
+            var proof = document.getElementById("proof");
+            if (proof.style.display === "none") {
+                proof.style.display = "block";
+            } else {
+                proof.style.display = "none";
+            }
+        }
+    </script>
 
 </body>
 </html>
